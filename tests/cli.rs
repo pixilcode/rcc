@@ -34,7 +34,7 @@ fn compile_single_file() -> Result<(), Box<dyn std::error::Error>> {
 	// Run the command
 	cmd.assert()
 		.success() // Assert that it was a success
-		//.stdout(predicate::eq("Success").trim()) // 
+		.stdout(predicate::eq("Success").trim()) // 
 	;
 
 	let executable_dir = project_assets_dir!("/single-file");

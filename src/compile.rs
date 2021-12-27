@@ -73,7 +73,11 @@ pub fn compile<P: AsRef<path::Path>>(path: P) -> Result<path::PathBuf, CompileEr
 	io::stdout().write_all(&output.stdout).unwrap();
 	io::stderr().write_all(&output.stderr).unwrap();
 
-	Ok(exe_path)
+	if output.status.success() {
+		Ok(exe_path)
+	} else {
+		Err(CompileError::GppCompileError)
+	}
 }
 
 #[derive(Debug)]
@@ -89,7 +93,10 @@ pub enum CompileError {
     InvalidExtension(Option<OsString>),
 
 	/// There was an error running `g++`
-	GppError
+	GppError,
+
+	/// There was an error in compiling the file using `g++`
+	GppCompileError,
 }
 
 impl std::error::Error for CompileError {}
@@ -102,6 +109,7 @@ impl fmt::Display for CompileError {
 			CompileError::NotFile(None) => write!(f, "error: not a file"),
 			CompileError::InvalidExtension(_) => write!(f, "error: file must have a `.cpp` or `.c` extension"),
 			CompileError::GppError => write!(f, "error: couldn't run 'g++' (make sure it is installed)"),
+			CompileError::GppCompileError => write!(f, "error: code didn't compile (see compiler output above)"),
 		}
 	}
 }
