@@ -1,6 +1,6 @@
-# `rcc`: A C++ project manager
+# `rcc`: A C++ project manager in Rust
 
-Tired of using having to type out every single file that you need to
+Tired of having to type out every single file that you need to
 include in compilation? Don't feel like learning to use `make` or
 `cmake` since you've got other better things to do? Feel like having
 a compilation tool that you've coded yourself instead of using tools
