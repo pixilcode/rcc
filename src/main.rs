@@ -15,7 +15,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
 
 fn run_file<P: AsRef<path::Path>>(path: P) -> Result<(), Box<dyn std::error::Error>> {
     let exec_path = compile::compile(path)?;
-    run_exec(exec_path);
+    run_exec(exec_path)?;
     
     Ok(())
 }
