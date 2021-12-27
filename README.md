@@ -17,3 +17,5 @@ code it in Rust!!)
 - [ ] Compile and run a directory
 - [ ] Compile and run based on a config file
 - [ ] Incremental compilation
+- [ ] Handle errors from running `g++` better
+- [ ] Testing should use `Path`s, not `String`s
