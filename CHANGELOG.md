@@ -6,10 +6,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+
+## [0.1.0] - 2021-12-27
 ### Added
 * Initialized the repository
 * Created a README describing reasoning and roadmap
 * Added a Changelog
+* Can compile and run a single file
 
 
-[Unreleased]: https://github.com/pixilcode/rcc/
+[Unreleased]: https://github.com/pixilcode/rcc/compare/v0.1.0...HEAD
+[0.1.0]: https://github.com/pixilcode/rcc/releases/tag/v0.1.0

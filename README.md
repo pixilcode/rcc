@@ -13,7 +13,7 @@ Nothing super complicated, just a fun little project. (And I get to
 code it in Rust!!)
 
 ## Roadmap
-- [ ] Compile and run one file
+- [x] Compile and run one file
 - [ ] Compile and run a directory
 - [ ] Compile and run based on a config file
 - [ ] Incremental compilation

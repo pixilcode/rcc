@@ -81,6 +81,7 @@ pub fn compile<P: AsRef<path::Path>>(path: P) -> Result<path::PathBuf, CompileEr
 }
 
 #[derive(Debug)]
+#[allow(clippy::enum_variant_names)]
 /// Errors that can be encountered when running a file
 pub enum CompileError {
     /// The path is invalid
