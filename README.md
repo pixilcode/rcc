@@ -19,3 +19,4 @@ code it in Rust!!)
 - [ ] Incremental compilation
 - [ ] Handle errors from running `g++` better
 - [ ] Testing should use `Path`s, not `String`s
+- [x] Pass arguments to the executable
